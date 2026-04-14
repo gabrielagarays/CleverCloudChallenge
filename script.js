@@ -13,11 +13,36 @@ function digitsSum(inputInt) {
   return suma;
 }
 
-/*Función alternativa. conviertes input en string y lo divides en un array, 
+/*
+Función alternativa.
+1.conviertes input en string.
+2.Lo divide en un array de caracteres
+3.reduce para sumar cada dígito
 function digitsSum(inputInt) {
     return inputInt
     .toString()
     .split('')
 // luego usas .reduce para sumar cada dígito convertido a número.
     .reduce((suma, digito) => suma + Number(digito), 0);
-} */
+} 
+*/
+
+//2. Palíndromo
+function ejecutarPalindromo() {
+    // Obtiene el valor del input, eliminando espacios con trim().
+  const input = document.getElementById('palabra-input').value.trim();
+//Validación: evitar ejecutar lógica si está vacío
+  if (input === '') {
+    mostrarResultado('resultado-palindromo', 'Escribe una palabra', 'error');
+    return;
+  }
+//Ejecutar la lógica de palíndromo
+  const resultado = isPalindrome(input);
+
+//Mostrar resultado con operador ternario (condición ? valor_si_verdadero : valor_si_falso)
+  mostrarResultado(
+    'resultado-palindromo',
+    resultado ? '✓ Sí es palíndromo' : '✗ No es palíndromo',
+    resultado ? 'exito' : 'error'
+  );
+}
