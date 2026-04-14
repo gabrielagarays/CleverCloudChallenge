@@ -16,104 +16,55 @@
 
     <link rel="stylesheet" href="styles.css" />
   </head>
-
   <body>
     <header class="header">
       <h1 class="titulo-principal">CLEVER CLOUD<br />CHALLENGE</h1>
     </header>
 
     <main class="contenedor-cards">
-      <!--Inicio: Card 1.SUMA DE DIGITOS-->
+      <!-- CARD 1 -->
       <div class="card">
-        <!-- titulo de la card en morado -->
         <h2 class="card-titulo">SUMA DE DÍGITOS</h2>
-
-        <!-- label e input para ingresar el numero -->
-        <label for="numero-input" class="card-label">Ingresa los números</label>
         <input
           type="number"
           id="numero-input"
           class="card-input"
           placeholder="ej: 12345"
         />
-
-        <!-- texto que dice "La suma es:" -->
-        <p class="card-label">La suma es :</p>
-
-        <!-- aqui aparece el resultado -->
-        <div id="resultado-suma" class="card-resultado">
-          <!-- el resultado se pone aqui con javascript -->
-        </div>
-
-        <!-- boton oculto que se activa al escribir, o un boton visible -->
-        <button class="card-boton" onclick="ejecutarSuma()">Calcular</button>
+        <div id="resultado-suma" class="card-resultado"></div>
+        <button id="btn-suma" class="card-boton">Calcular</button>
       </div>
-      <!-- fin Card 1 -->
 
-      <!-- Inicio: Card 2: PALINDROMO -->
+      <!-- CARD 2 -->
       <div class="card">
-        <!-- titulo de la card en morado -->
         <h2 class="card-titulo">PALÍNDROMO</h2>
-
-        <!-- label e input para la palabra -->
-        <label for="palabra-input" class="card-label">Ingresa la palabra</label>
         <input
           type="text"
           id="palabra-input"
           class="card-input"
           placeholder="ej: salas"
         />
-
-        <!-- texto que dice "¿Es palindromo?" -->
-        <p class="card-label">¿Es palíndromo?</p>
-
-        <!-- resultado del palindromo -->
-        <div id="resultado-palindromo" class="card-resultado">
-          <!-- el resultado se pone aqui con javascript -->
-        </div>
-
-        <!-- boton para verificar -->
-        <button class="card-boton" onclick="ejecutarPalindromo()">
-          Verificar
-        </button>
+        <div id="resultado-palindromo" class="card-resultado"></div>
+        <button id="btn-palindromo" class="card-boton">Verificar</button>
       </div>
-      <!-- Fin Card 2 -->
 
-      <!-- Inicio: Card 3: ORDENAMIENTO-->
+      <!-- CARD 3 -->
       <div class="card">
-        <!-- titulo de la card en morado -->
         <h2 class="card-titulo">ORDENAMIENTO</h2>
-
-        <!-- label e input para la lista de numeros -->
-        <label for="lista-input" class="card-label">Ingresa los números</label>
         <input
           type="text"
           id="lista-input"
           class="card-input"
-          placeholder="ej: 5, -2, 10, 0, 3"
+          placeholder="ej: 5, -2, 10"
         />
-
-        <!-- texto que dice la lista ordenada es -->
-        <p class="card-label">la lista ordena es:</p>
-
-        <!-- resultado del ordenamiento -->
-        <div id="resultado-ordenamiento" class="card-resultado">
-          <!-- el resultado se pone aqui con javascript -->
-        </div>
-
-        <!-- boton para ordenar -->
-        <button class="card-boton" onclick="ejecutarOrdenamiento()">
-          Ordenar
-        </button>
+        <div id="resultado-ordenamiento" class="card-resultado"></div>
+        <button id="btn-ordenar" class="card-boton">Ordenar</button>
       </div>
-      <!-- Fin card 3 -->
     </main>
-    <!-- fin contenedor cards -->
 
     <!-- Footer -->
 
     <footer class="footer">
-      <!-- texto de creditos centrado -->
       <div class="footer-texto">
         <p>© 2026 Gabriela Garay. All rights reserved.</p>
         <p>
@@ -121,8 +72,6 @@
         </p>
       </div>
     </footer>
-
-    <!-- conecto el javascript al final para que primero cargue el HTML -->
     <script src="script.js"></script>
   </body>
 </html>

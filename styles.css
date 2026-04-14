@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+
+  /* Background */
+  background-image: url('Artboard 1.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /* display flex para organizar header, main y footer en columna */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 60px 20px 30px 20px;
+}
+
+/* texto " clever cloud challenge"*/
+.titulo-principal {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: clamp(42px, 7vw, 90px);
+  color: #ffffff;
+  line-height: 1.05;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* contenedor-cards */
+.contenedor-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding: 20px 40px 40px 40px;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 28px;
+  padding: 30px 24px;
+  flex: 1;
+  min-width: 260px;
+  max-width: 340px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* titulos de ejercicios ("suma de digitos, palídromo,ordenamiento")*/
+.card-titulo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #7c3aed;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+/* Texto adentro de cada card "Ingresa los números", "La suma es:"... */
+.card-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+/*inputs negros*/
+.card-input {
+  width: 100%;
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding: 12px 20px;
+  outline: none;
+}
+
+/*placeholder en gris claro*/
+.card-input::placeholder {
+  color: #666666;
+}
+
+/*borde morado para indicar que está seleccionado*/
+.card-input:focus {
+  box-shadow: 0 0 0 2px #7c3aed;
+}
+
+/* quito las flechitas del input numero */
+.card-input[type="number"]::-webkit-inner-spin-button,
+.card-input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* resultado */
+.card-resultado {
+  width: 100%;
+  background-color: #1a1a1a;
+  border-radius: 50px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 20px;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* cuando el resultado es correcto/verdadero */
+.card-resultado.exito {
+  color: #7c3aed;
+}
+
+/* cuando el resultado es negativo o hay algun error */
+.card-resultado.error {
+  color: #f87171;
+}
+
+
+/* boton morado debajo del resultado */
+.card-boton {
+  width: 50%;
+  margin: 12px auto;
+  background-color: #7c3aed;
+  color: #000000;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 20px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s, transform 0.15s;
+  margin-top: 4px;
+}
+
+.card-boton:hover {
+  background-color: #6d28d9;
+}
+
+.card-boton:active {
+  transform: scale(0.97);
+}
+/*FOOTER*/
+.footer {
+  width: 100%;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #151414;;;
+}
+
+/* texto de creditos del footer */
+.footer-texto {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE PARA PANTALLAS PEQUEÑAS */
+/* en pantallas menores a 800px las cards van en columna */
+@media (max-width: 800px) {
+
+  .titulo-principal {
+    font-size: 38px;
+  }
+
+  .contenedor-cards {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  /* en movil las cards ocupan casi todo el ancho */
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* en movil los iconos van abajo del texto del footer */
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .footer-iconos {
+    position: static;
+  }
+}
